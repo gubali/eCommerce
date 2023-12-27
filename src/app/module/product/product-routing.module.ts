@@ -7,7 +7,8 @@ import { GetSingleProductComponent } from './get-single-product/get-single-produ
 
 const route: Routes = [
   {
-    path: 'product-welcome',
+    // path: 'product-welcome',
+    path: '',
     component: ProductWelcomeComponent,
     children: [
       { path: '', component: ProductGallaryComponent, pathMatch:'full' },
