@@ -1,1 +1,3 @@
+Observable => Multiple sourse of data: (User inout) events,HttpRequest, Triggreded in code
 
+Steram============>Time line(Multiple event emitted)
