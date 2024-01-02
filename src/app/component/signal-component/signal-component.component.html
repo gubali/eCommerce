@@ -1,0 +1,138 @@
+
+<h3 class="text-success text-center">Normal Behaviour of property Change</h3>
+
+
+First Name:<span class="text-danger">{{ firstName }}</span
+><br />
+Last Name<span class="text-danger">{{ lastName }}</span> <br />
+FullName: <span class="text-primary">{{ fullName }}</span>
+<br />
+<div
+  class="row g-3 align-items-center"
+  style="background-color: #eee; border-left: 5px solid #ddd; margin-top:15px">
+  <div class="col-auto">
+    <label for="staticEmail2" class="visually-hidden">First Name</label>
+    <input
+      type="text"
+      readonly
+      class="form-control-plaintext"
+      id="staticEmail2"
+      value="Enter First Name"
+    />
+  </div>
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Enter First Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputPassword2"
+      placeholder="Enter First Name1"
+      [value]="firstName"
+      #fname
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" (click)="changeFirstName(fname.value)">
+      Change first name
+    </button>
+  </div>
+  <div class="col-auto">
+    <label for="staticEmail2" class="visually-hidden">Enter Last Name</label>
+    <input
+      type="text"
+      readonly
+      class="form-control-plaintext"
+      id="staticEmail2"
+      value="Enter last name"
+    />
+  </div>
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input
+      type="text"
+      class="form-control"
+      id="inputPassword2"
+      placeholder="lastName"
+      [value]="lastName"
+      #lname
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3" (click)="changeLastName(lname.value)">Change Last Name</button>
+  </div>
+</div>
+
+
+
+
+<h3 class="text-primary text-center" style="margin-top: 20px;">Wih help of signal Set() behaviour</h3>
+
+
+    First Name:<span class="text-danger">{{s_firstName() }}</span
+    ><br />
+    Last Name<span class="text-danger">{{s_lastName() }}</span> <br />
+    FullName: <span class="text-primary">{{ s_fullName() }}</span>
+    <br />
+    <div
+      class="row g-3 align-items-center"
+      style="background-color: #eee; border-left: 5px solid #ddd; margin-top:15px">
+      <div class="col-auto">
+        <label for="staticEmail2" class="visually-hidden">First Name</label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext"
+          id="staticEmail2"
+          value="Enter First Name"
+        />
+      </div>
+      <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Enter First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputPassword2"
+          placeholder="signal fname"
+          [value]="s_firstName()"
+          #sfname
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" (click)="s_changeFirstName(sfname.value)">
+          Change first name
+        </button>
+      </div>
+      <div class="col-auto">
+        <label for="staticEmail2" class="visually-hidden">Enter Last Name</label>
+        <input
+          type="text"
+          readonly
+          class="form-control-plaintext"
+          id="staticEmail2"
+          value="Enter last name"
+        />
+      </div>
+      <div class="col-auto">
+        <label for="inputPassword2" class="visually-hidden">Password</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputPassword2"
+          placeholder="lastName"
+          [value]="s_lastName()"
+          #slname
+        />
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" (click)="s_changeLastName(slname.value)">Change Last Name</button>
+      </div>
+    </div>
+    
+
+    <h3 class="text-success">Signal Update() Method</h3>
+    <button type="submit" class="btn btn-success mb-3" (click)="increaseValue()">+</button>
+    {{quantity()}}
+    <button type="submit" class="btn btn-danger mb-3" (click)="decreaseValue()">-</button>
+
+    Double value by 2 On: <h3>{{doubleCounter()}}</h3>
+   

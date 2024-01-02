@@ -8,13 +8,15 @@ import { ProductModule } from './module/product/product.module';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './module/user/user.module';
 import { AppSharedModule } from './shared/shared.module';
+import { SignalComponentComponent } from './component/signal-component/signal-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SignalComponentComponent
   ],
   imports: [
     BrowserModule,
