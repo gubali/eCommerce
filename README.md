@@ -1,3 +1,6 @@
+# Implemtaion of feature module and child routing and lazy loading with chunk genrated to verify lazy loading properly is working.
+![image](https://github.com/gubali/eCommerce/assets/38999996/864297fb-de78-45ad-9658-b3e91b4db603)
+
 # ECommerce
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
